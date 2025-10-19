@@ -1,5 +1,5 @@
 {
-      "name": "bilingual-health-companion-app-(community)",
+      "name": "bilingual-health-companion-app-community",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -62,7 +62,8 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "npx vite build"
+            "build": "vite build",
+            "preview": "vite preview"
       },
       "description": "This is a code bundle for Bilingual Health Companion App (Community). The original project is available at https://www.figma.com/design/g5EHCb0U3C2R1Jw8OVqs00/Bilingual-Health-Companion-App--Community-.",
       "main": "index.js",
