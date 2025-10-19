@@ -44,7 +44,7 @@ export function AIInsightCard({
             <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-600/20">
               <Sparkles className="h-4 w-4 text-purple-600" />
             </div>
-            <h3 className={`text-purple-900 ${isUrdu ? 'font-urdu' : ''}`}>
+            <h3 className={`text-purple-800 ${isUrdu ? 'font-urdu' : ''}`}>
               {isUrdu ? titleUrdu : title}
             </h3>
           </div>
