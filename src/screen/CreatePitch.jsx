@@ -140,7 +140,7 @@ const CreatePitch = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-white text-black hover:bg-black hover:to-purple-700 hover:text-white py-2 px-6 rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 text-lg"
+                            className="w-full bg-white text-black hover:bg-black hover:to-purple-600 hover:text-white py-2 px-6 rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 text-lg"
                         >
                             {loading ? (
                                 <>
