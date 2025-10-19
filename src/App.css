@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "neue";
+  src: url(./font/NeueMontreal-Light.otf);
+}
+
+;
+
+@font-face {
+  font-family: "r-neue";
+  src: url(./font/NeueMontreal-Regular.otf);
+}
+
+;
+
+@font-face {
+  font-family: "founders";
+  src: url(./font/FoundersGrotesk-Semibold.ttf);
+}
+
+;
+
+.btn-hover:hover .circle {
+
+  animation-name: anime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: all;
+
+}
+
+.btn-hover:hover .erow {
+  color: black;
+}
+
+
+@keyframes anime {
+  from {
+    scale: 0;
+    animation-duration: 1s;
+
+  }
+
+  to {
+    scale: 400%;
+    animation-duration: 1s;
+    
+
+  }
+
+}
+
