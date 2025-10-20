@@ -53,9 +53,9 @@ const Signup = () => {
             }}>
 
             <div className="max-w-md font-[r-neue] w-full space-y-8 bg-white p-8 rounded-2xl shadow-xl">
-                {/* Header */}
+
                 <div className="text-center">
-                    <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                    <h2 className="mt-6 text-3xl font-extrabold text-gray-800">
                         Create Account
                     </h2>
                     <p className="mt-2 text-sm text-gray-600">
