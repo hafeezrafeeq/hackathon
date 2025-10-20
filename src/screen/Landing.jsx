@@ -7,6 +7,7 @@ import About from '../components/About';
 import Eyes from '../components/Eyes';
 import Featured from '../components/Featured';
 import Gemini from "../components/Gemini"
+import Footer from '../components/Footer';
 
 function Landing() {
   return (
@@ -15,7 +16,8 @@ function Landing() {
       <LandingPage />
       <GreenArea />
       <About />
-      <Eyes />
+      <Eyes 
+      className="bg-[(https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg)]"/>
 
       <Featured
         image1={"https://ochi.design/wp-content/uploads/2025/02/Salience_Website_cover-663x551.png"}
@@ -33,6 +35,7 @@ function Landing() {
       />
 
       <Gemini/>
+      <Footer/>
 
      
     </div>

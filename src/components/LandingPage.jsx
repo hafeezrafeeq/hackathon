@@ -13,13 +13,13 @@ import { Link } from 'react-router-dom'; // Added Link import
                     <div className='heading flex items-center' key={index}>
 
                         {index === 1 && (
-                            <motion.img   
+                            <motion.div   
                             initial={{width:0}}
                             animate={{width:"8.5vw"}}
                             transition={{ease:[0.76, 0, 0.24, 1], duration:2}}                            
-                            src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
-                            className="w-[8.5vw] h-[5.4vw] mr-[0.5vw] object-cover overflow-hidden relative top-[0.4vw] rounded-md">                                
-                             </motion.img>
+                            className="w-[8.5vw]  bg-[#004d43] h-[5.4vw] mr-[0.5vw] object-cover overflow-hidden relative top-[0.4vw] rounded-md">                                
+                             <h1 className="text-[120px] rotate-45 font-[r-neue] flex items-center justify-center">You</h1>
+                             </motion.div>
                         )}
 
                         <h1 className="font-[founders] text-[8.5vw] leading-[6vw] uppercase">
