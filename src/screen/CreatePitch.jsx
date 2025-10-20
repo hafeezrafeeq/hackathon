@@ -131,7 +131,7 @@ const CreatePitch = () => {
 
                         {/* Error Message */}
                         {error && (
-                            <div className=" border bg-red-400 text-red-200 px-4 py-3 rounded-lg">
+                            <div className=" border bg-red-300 text-red-200 px-4 py-3 rounded-lg">
                                 <strong>Error:</strong> {error}
                             </div>
                         )}
@@ -140,7 +140,7 @@ const CreatePitch = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-white text-black hover:bg-black hover:text-white py-2 px-6 rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 text-lg"
+                            className="w-full bg-white text-black hover:bg-black hover:text-white py-2 px-4 rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 text-lg"
                         >
                             {loading ? (
                                 <>
