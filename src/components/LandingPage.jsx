@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion";
 import React from 'react'
 import { IoIosArrowRoundUp } from "react-icons/io";
 import { Link } from 'react-router-dom'; // Added Link import
