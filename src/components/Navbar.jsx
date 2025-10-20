@@ -38,7 +38,7 @@ function Navbar() {
             initial={{ y: 0 }}
             animate={{ y: show ? 0 : -100 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed top-0 left-0 z-[999] w-full backdrop-blur-md py-5 px-6 md:px-12 lg:px-14 flex font-[r-neue] items-center justify-between text-white transition-transform duration-500"
+            className="fixed top-0 left-0  w-full backdrop-blur-md py-5 px-6 md:px-12 lg:px-14 flex font-[r-neue] items-center justify-between text-white transition-transform duration-500"
         >
             {/* Logo */}
             <div className="logo">
@@ -88,8 +88,7 @@ function Navbar() {
           className="bg-zinc-900  hover:bg-zinc-800 px-8 py-2 border-2 border-stone-400 rounded-4xl font-[neue] text-lg transition-all duration-200 inline-block"
         >
          Create Account
-        </Link>
-      
+        </Link>    
 
 
 

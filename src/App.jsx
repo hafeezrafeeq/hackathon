@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './screen/Landing';
-import Login from './screen/login';
+import Login from './screen/Login';
 import SignUp from './screen/SignUp';
 import CreatePitch from './screen/CreatePitch';
 import PitchResult from './screen/PitchResult';
