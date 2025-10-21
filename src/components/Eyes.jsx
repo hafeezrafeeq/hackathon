@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const Eyes = ({className=""}) => {
+const Eyes = ({ className = "" }) => {
   const eyesRef = useRef([]);
   const pupilsRef = useRef([]);
   const targetRef = useRef([
@@ -77,7 +77,7 @@ const Eyes = ({className=""}) => {
     <div className="h-screen overflow-hidden ">
 
       <div
-        
+        data-scroll data-scroll-speed="-.7"
         className={` flex items-center h-full justify-center p-8 bg-cover bg-center ${className}`}
       >
         {[0, 1].map((i) => (

@@ -2,6 +2,10 @@ import { useState } from "react";
 import { generatePitch } from "../gemini/gemini";
 import Navbar from "../components/Navbar";
 import PitchResult from "./PitchResult";
+import { VscSymbolColor} from "react-icons/vsc";
+import { IoEarth } from "react-icons/io5";
+import { SlEnergy } from "react-icons/sl";
+
 
 const CreatePitch = () => {
     const [formData, setFormData] = useState({
@@ -23,9 +27,9 @@ const CreatePitch = () => {
         setShowResult(false);
 
         try {
-            console.log("📝 Sending data to AI...", formData);
+            console.log(" Sending data to AI...", formData);
             const generatedPitchData = await generatePitch(formData.idea, formData.industry, formData.tone, formData.language);
-            console.log("✅ AI Response received:", generatedPitchData);
+            console.log(" AI Response received:", generatedPitchData);
 
             // Set the pitch data and show result
             setPitchData(generatedPitchData);
@@ -79,17 +83,15 @@ const CreatePitch = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-zinc-800 text-white">
+        <div className="min-h-screen  from-zinc-900 font-[r-neue] to-zinc-800 text-white">
             <Navbar />
             
             {/* Main Content */}
             <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-2xl">
-                        <span className="text-3xl">🚀</span>
-                    </div>
-                    <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
+                    
+                    <h1 className="text-5xl font-[r-neue] sm:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
                         PitchCraft AI
                     </h1>
                     <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
@@ -174,9 +176,9 @@ const CreatePitch = () => {
                                     onChange={handleChange}
                                     className="w-full px-4 py-4 bg-zinc-900/80 border border-zinc-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition-all duration-300 group-hover:border-zinc-500 appearance-none cursor-pointer"
                                 >
-                                    <option value="formal">💼 Formal Professional</option>
-                                    <option value="casual">😊 Casual Friendly</option>
-                                    <option value="energetic">⚡ Energetic Exciting</option>
+                                    <option value="formal"> Formal Professional</option>
+                                    <option value="casual"> Casual Friendly</option>
+                                    <option value="energetic"> Energetic Exciting</option>
                                 </select>
                                 <p className="text-sm text-zinc-500 mt-2">Set the tone for your pitch presentation</p>
                             </div>
@@ -207,9 +209,9 @@ const CreatePitch = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <span className="group-hover:scale-110 transition-transform">✨</span>
+                                        <span className="group-hover:scale-110 transition-transform"></span>
                                         Generate My Pitch
-                                        <span className="group-hover:scale-110 transition-transform">🚀</span>
+                                        <span className="group-hover:scale-110 transition-transform"></span>
                                     </>
                                 )}
                             </button>
@@ -240,19 +242,19 @@ const CreatePitch = () => {
 
                     {/* Info Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 text-center">
-                            <div className="text-2xl mb-2">🎨</div>
-                            <h3 className="font-semibold text-white mb-1">Smart Branding</h3>
+                        <div className="bg-blue-500/10 flex flex-col items-center border border-blue-500/20 rounded-xl p-4 text-center">
+                            <div className="text-4xl  mb-2"><VscSymbolColor /></div>
+                            <h3 className="text-white mb-1">Smart Branding</h3>
                             <p className="text-sm text-zinc-400">AI creates creative names and industry-perfect colors</p>
                         </div>
-                        <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 text-center">
-                            <div className="text-2xl mb-2">🌍</div>
-                            <h3 className="font-semibold text-white mb-1">Multi-language</h3>
+                        <div className="bg-purple-500/10 flex flex-col items-center border border-purple-500/20 rounded-xl p-4 text-center">
+                            <div className="text-4xl mb-2"><IoEarth/></div>
+                            <h3 className="text-white mb-1">Multi-language</h3>
                             <p className="text-sm text-zinc-400">Get your pitch in English, Urdu, or Spanish</p>
                         </div>
-                        <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 text-center">
-                            <div className="text-2xl mb-2">⚡</div>
-                            <h3 className="font-semibold text-white mb-1">Fast & Accurate</h3>
+                        <div className="bg-green-500/10 flex flex-col items-center border border-green-500/20 rounded-xl p-4 text-center">
+                            <div className="text-4xl mb-2">< SlEnergy/></div>
+                            <h3 className="text-white mb-1">Fast & Accurate</h3>
                             <p className="text-sm text-zinc-400">Professional results in seconds</p>
                         </div>
                     </div>

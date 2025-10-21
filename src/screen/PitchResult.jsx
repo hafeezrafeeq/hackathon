@@ -1,5 +1,10 @@
+import { VscSymbolColor} from "react-icons/vsc";
+import { TfiTarget } from "react-icons/tfi";
+import { LuProportions } from "react-icons/lu";
+
 const PitchResult = ({ pitchData }) => {
   console.log("📊 PitchData received via props:", pitchData);
+
 
   if (!pitchData) {
     return (
@@ -53,11 +58,11 @@ const PitchResult = ({ pitchData }) => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white py-8 px-4">
+    <div className="min-h-screen font-[r-neue] bg-zinc-900 text-white py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">🚀 Your AI-Generated Pitch</h1>
+          <h1 className="text-4xl font-bold mb-4">Your AI-Generated Pitch</h1>
           <p className="text-xl text-zinc-400">Professional startup pitch ready to impress investors</p>
         </div>
 
@@ -75,25 +80,25 @@ const PitchResult = ({ pitchData }) => {
             {/* Elevator Pitch */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">🎯</span> Elevator Pitch
+                <span className="text-2xl"></span> Elevator Pitch
               </h3>
               <p className="text-zinc-300 leading-relaxed">{data.elevatorPitch}</p>
             </div>
 
             {/* Problem & Solution */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
-              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <span className="text-2xl">💡</span> Problem & Solution
+              <h3 className="text-3xl font-semibold mb-4 flex items-center gap-2">
+             Problem & Solution
               </h3>
-              <div className="space-y-4">
+              <div className="pt-3 space-y-4">
                 <div>
-                  <h4 className="font-semibold text-red-400 mb-2">The Problem:</h4>
-                  <div className="bg-red-900/20 p-4 rounded-lg border border-red-800/30">
+                  <h4 className="text-lg text-red-200 mb-2">The Problem:</h4>
+                  <div className="bg-red-4x00/20 p-4 rounded-lg border border-red-400/30">
                     <p className="text-zinc-300">{data.problemStatement}</p>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-green-400 mb-2">Our Solution:</h4>
+                  <h4 className="text-lg text-green-400 mb-2">Our Solution:</h4>
                   <div className="bg-green-900/20 p-4 rounded-lg border border-green-800/30">
                     <p className="text-zinc-300">{data.solution}</p>
                   </div>
@@ -103,16 +108,16 @@ const PitchResult = ({ pitchData }) => {
 
             {/* Target Audience & Value */}
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
-                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">👥</span> Target Audience
+              <div className="bg-zinc-800 h-[12.8vw] rounded-xl p-6 border border-zinc-700">
+                <h3 className="text-2xl mb-8 flex items-center gap-2">
+                  <span className="text-2xl text-amber-500"><TfiTarget /></span> Target Audience
                 </h3>
                 <p className="text-zinc-300">{data.targetAudience}</p>
               </div>
 
               <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
-                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">⭐</span> Value Proposition
+                <h3 className="text-2xl  mb-8 flex items-center gap-2">
+                  <span className="text-2xl text-[#7c3aed] "><LuProportions /></span> Value Proposition
                 </h3>
                 <p className="text-zinc-300">{data.valueProposition}</p>
               </div>
@@ -124,43 +129,23 @@ const PitchResult = ({ pitchData }) => {
             {/* Hero Section Preview */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <span className="text-2xl">🎨</span> Landing Page Design
+                <span className="text-2xl"><VscSymbolColor /></span> Landing Page Design
               </h3>
               
               {/* Hero Section */}
-              <div className="mb-6 p-6 rounded-lg border-2 border-zinc-600" style={{ backgroundColor: data.landingPageDesign.colorScheme.background }}>
-                <h2 className="text-2xl font-bold mb-3" style={{ color: data.landingPageDesign.colorScheme.text }}>
+              <div className="mb-6 p-4 rounded-lg border-1 border-zinc-600" style={{ backgroundColor: data.landingPageDesign.colorScheme.background }}>
+                <h1 className="text-2xl bold">Title</h1>
+                <h2 className="text-lg  my-2" style={{ color: data.landingPageDesign.colorScheme.text }}>
                   {data.landingPageDesign.heroSection.title}
                 </h2>
-                <p className="text-lg mb-6 opacity-90" style={{ color: data.landingPageDesign.colorScheme.text }}>
+                <p className="text-lg mb-2 opacity-90" style={{ color: data.landingPageDesign.colorScheme.text }}>
                   {data.landingPageDesign.heroSection.subtitle}
                 </p>
-                <div className="flex gap-4">
-                  <button 
-                    className="px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
-                    style={{ 
-                      backgroundColor: data.landingPageDesign.colorScheme.primary,
-                      color: 'white'
-                    }}
-                  >
-                    {data.landingPageDesign.heroSection.ctaButton}
-                  </button>
-                  <button 
-                    className="px-6 py-3 rounded-lg font-semibold border-2 transition-all hover:scale-105"
-                    style={{ 
-                      borderColor: data.landingPageDesign.colorScheme.primary,
-                      color: data.landingPageDesign.colorScheme.primary,
-                      backgroundColor: 'transparent'
-                    }}
-                  >
-                    {data.landingPageDesign.heroSection.secondaryButton}
-                  </button>
                 </div>
-              </div>
 
               {/* Color Scheme */}
               <div className="mb-6">
-                <h4 className="font-semibold text-zinc-300 mb-4">Industry Color Scheme:</h4>
+                <h4 className=" text-zinc-300 mb-4">Industry Color Scheme:</h4>
                 <div className="grid grid-cols-5 gap-4">
                   {Object.entries(data.landingPageDesign.colorScheme).map(([name, color]) => (
                     <div key={name} className="text-center">
@@ -178,11 +163,11 @@ const PitchResult = ({ pitchData }) => {
               {/* Features */}
               <div>
                 <h4 className="font-semibold text-zinc-300 mb-4">Key Features:</h4>
-                <div className="grid gap-4">
+                <div className="flex  gap-4">
                   {data.landingPageDesign.features.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-zinc-700/50 rounded-lg border border-zinc-600">
-                      <span className="text-2xl flex-shrink-0">{feature.icon}</span>
-                      <div>
+                    <div key={index} className="flex flex-col items-center gap-4 p-4 bg-zinc-700/50 rounded-lg border border-zinc-600">
+                      <div><span className="text-2xl ">{feature.icon}</span></div>
+                      <div className="">
                         <h5 className="font-semibold text-zinc-200 text-lg mb-1">{feature.title}</h5>
                         <p className="text-zinc-400 text-sm">{feature.description}</p>
                       </div>
@@ -197,38 +182,22 @@ const PitchResult = ({ pitchData }) => {
               <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                 <span className="text-2xl">🔤</span> Typography
               </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-zinc-700/30 rounded">
-                  <span className="text-zinc-400">Heading Font:</span>
-                  <span className="text-zinc-200 font-semibold">{data.landingPageDesign.typography.headingFont}</span>
+              <div className="flex gap-6 space-y-3">
+                <div className="flex flex-col justify-between items-center p-4 w-[12vw] h-[6vw] bg-zinc-700/30 rounded">
+                  <span className="text-zinc-100 text-lg">Heading Font:</span>
+                  <span className="text-zinc-400 text-mg ">{data.landingPageDesign.typography.headingFont}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-zinc-700/30 rounded">
-                  <span className="text-zinc-400">Body Font:</span>
-                  <span className="text-zinc-200 font-semibold">{data.landingPageDesign.typography.bodyFont}</span>
+                <div className="flex flex-col justify-between items-center p-4 w-[12vw] h-[6vw] bg-zinc-700/30 rounded">
+                  <span className="text-zinc-100 text-lg">Body Font:</span>
+                  <span className="text-zinc-400 text-mg ">{data.landingPageDesign.typography.bodyFont}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-zinc-700/30 rounded">
-                  <span className="text-zinc-400">Style:</span>
-                  <span className="text-zinc-200 font-semibold capitalize">{data.landingPageDesign.typography.fontStyle}</span>
+                <div className="flex flex-col justify-between items-center p-4 w-[12vw] h-[6vw] bg-zinc-700/30 rounded">
+                  <span className="text-zinc-100 text-lg">Style:</span>
+                  <span className="text-zinc-400 text-mg  ">{data.landingPageDesign.typography.fontStyle}</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center mt-12">
-          <button 
-            onClick={handleSavePitch}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg"
-          >
-            💾 Save Pitch
-          </button>
-          <button 
-            onClick={handleExportPDF}
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg"
-          >
-            📄 Export as PDF
-          </button>
         </div>
       </div>
     </div>

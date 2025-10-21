@@ -57,9 +57,9 @@ function About() {
                     <h1 className='text-[3vw] '>How we can help:</h1>
                     <button className='btn-hover bg-zinc-900 text-white flex items-center rounded-4xl py-4 px-6 '>
                         <h1>READ MORE </h1>
-                        <spen className=' circle w-2 h-2 flex items-center rounded-full bg-white rotate-45 ml-[2vw]'>
+                        <span className=' circle w-2 h-2 flex items-center rounded-full bg-white rotate-45 ml-[2vw]'>
                             <IoIosArrowRoundUp className='erow text-lg rounded-full text-white' />
-                        </spen>
+                        </span>
                     </button>
                 </div>
 
