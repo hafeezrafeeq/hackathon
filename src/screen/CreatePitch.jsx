@@ -83,7 +83,7 @@ const CreatePitch = () => {
     }
 
     return (
-        <div className="min-h-screen  from-zinc-900 font-[r-neue] to-zinc-800 text-white">
+        <section id="pitchcraft" className="min-h-screen  from-zinc-900 font-[r-neue] to-zinc-800 text-white">
             <Navbar />
             
             {/* Main Content */}
@@ -155,7 +155,7 @@ const CreatePitch = () => {
                                     name="language"
                                     value={formData.language}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-4 bg-zinc-900/80 border border-zinc-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition-all duration-300 group-hover:border-zinc-500 appearance-none cursor-pointer"
+                                    className="w-full px-4 py-4 bg-zinc-900/80 border border-zinc-600 rounded-xl focus:ring-2 focus:ring-[#10574f] focus:border-blue-500 text-white transition-all duration-300 group-hover:border-zinc-500 appearance-none cursor-pointer"
                                 >
                                     <option value="english">🇺🇸 English</option>
                                     <option value="urdu">🇵🇰 Urdu</option>
@@ -269,7 +269,7 @@ const CreatePitch = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

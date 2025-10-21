@@ -49,37 +49,45 @@ function Navbar() {
 
             {/* Desktop Links */}
             <motion.div
-                variants={boxVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.6 }}
-                className="hidden md:flex gap-8 text-lg font-[neue]"
-            >
-                {["Home ", "About Us", "Services", "Insights",].map(
-                    (item, index) => (
-                        <motion.a
-                            key={index}
-                            href="#"
-                            className={`relative pb-[4px] `}
-                            initial="rest"
-                            whileHover="hovered"
-                            animate="rest"
-                        >
-                            {item}
-                            <motion.span
-                                variants={{
-                                    rest: { width: 0 },
-                                    hovered: { width: "100%" },
-                                }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                                className="absolute left-0 bottom-0 h-[2px] bg-[#f1f1f1]"
-                            />
-                        </motion.a>
-                    )
-                )}
-
-                
-            </motion.div>
+    variants={boxVariants}
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.6 }}
+    className="hidden md:flex gap-8 text-lg font-[neue]"
+>
+    {[
+        { name: "Home", link: "#home" },
+        { name: "About Us", link: "#about" },
+        { name: "Services", link: "#services" },
+        { name: "PitchCraft", link: "#pitchcraft" }
+    ].map((item, index) => (
+        <motion.a
+            key={index}
+            href={item.link}
+            className={`relative pb-[4px] hover:text-white transition-colors duration-300 cursor-pointer`}
+            initial="rest"
+            whileHover="hovered"
+            animate="rest"
+            onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector(item.link);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }}
+        >
+            {item.name}
+            <motion.span
+                variants={{
+                    rest: { width: 0 },
+                    hovered: { width: "100%" },
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="absolute left-0 bottom-0 h-[2px] bg-[#f1f1f1]"
+            />
+        </motion.a>
+    ))}
+</motion.div>
 
 
   
@@ -87,7 +95,7 @@ function Navbar() {
           to="/login" 
           className="bg-zinc-900  hover:bg-zinc-800 px-8 py-2 border-2 border-stone-400 rounded-4xl font-[neue] text-lg transition-all duration-200 inline-block"
         >
-         Create Account
+         Login
         </Link>    
 
 

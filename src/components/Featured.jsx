@@ -4,7 +4,7 @@ import React from 'react'
 function Featured({ image1, image2, whiteDoth1, whiteDoth2, className = "" }) {
 
     return (
-        <div className='w-full px-6 md:px-12 lg:px-14 font-[r-neue] pt-10 pb-30 text-black bg-[#f1f1f1] ${className}'>
+        <section id='services' className='w-full px-6 md:px-12 lg:px-14 font-[r-neue] pt-10 pb-30 text-black bg-[#f1f1f1] ${className}'>
             <h1 className={`text-[4vw] mb-6   py-4 border-b-2  border-[#b2b2b2] ${className}`}>Services</h1>
             <div className='w-full  flex gap-2'>
                 <div className='w-[50%] h-[40vw] rounded-2xl'>
@@ -47,7 +47,7 @@ function Featured({ image1, image2, whiteDoth1, whiteDoth2, className = "" }) {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
 

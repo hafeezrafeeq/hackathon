@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'; // Added Link import
 
   function LandingPage() {
     return (
-        <div className='LandingPage relative  h-screen bg-zinc-900'>
+        <section id="home" className='LandingPage relative  h-screen bg-zinc-900'>
             <div className='px-6 md:px-12 lg:px-14 pt-40'>
                 {["Your startup", "Powered-by", "Strategy and AI."].map((item, index) => (
 
@@ -46,17 +46,17 @@ import { Link } from 'react-router-dom'; // Added Link import
 
                  <div className='flex btn-hover items-center mt-4'>
                     <Link
-                        to="/create-pitch" 
+                        to="/signup" 
                         className=' flex items-center gap-4 px-4 py-2 border-2 font-[neue] rounded-4xl border-zinc-400 hover:bg-zinc-800 transition-colors duration-200'
                     >
-                       Generate Your Pitch
+                       Create a Account
                         <div className=' circle w-2 h-2 flex items-center rounded-full bg-white rotate-45 ml-[2vw]'>
                             <IoIosArrowRoundUp className='erow text-lg rounded-full text-white' />
                         </div>
                     </Link>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -3,7 +3,7 @@ import { IoIosArrowRoundUp } from "react-icons/io";
 
 function About() {
     return (
-        <div data-scroll data-scroll-speed="-.05"
+        <section id='about' data-scroll data-scroll-speed="-.05"
             className='bg-[#cdea68] text-zinc-900 font-[r-neue]'>
             <h1 className='p-[4vw] pt-[6vw] text-[2.5vw] border-b-1 leading-12'>
                 Our mission is simple — make startup building easy,<br />
@@ -37,7 +37,7 @@ function About() {
                 </div>
 
                 <div className={`w-[25%] flex flex-col`}>
-                    {["Social Link", "Linkedin", "Facebook", "Behance", "Linkedin"].map(
+                    {["Social Link", "Linkedin", "github", "Behance", "Facebook"].map(
                         (item, index) => (
                             <a
                                 key={index}
@@ -69,7 +69,7 @@ function About() {
 
 
 
-        </div>
+        </section>
     )
 }
 

@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import GreenArea from '../components/GreenArea';
 import About from '../components/About';
 import Eyes from '../components/Eyes';
-import Featured from '../../components/Featured';
+import Featured from '../components/Featured';
 
 import Footer from '../components/Footer';
 import CreatePitch from './CreatePitch';
