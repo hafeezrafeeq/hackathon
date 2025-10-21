@@ -74,15 +74,11 @@ const Eyes = ({className=""}) => {
   }, []);
 
   return (
-    <div className="h-screen  overflow-hidden ">
+    <div className="h-screen overflow-hidden ">
 
       <div
-        data-scroll data-scroll-speed="-.7"
+        
         className={` flex items-center h-full justify-center p-8 bg-cover bg-center ${className}`}
-        style={{
-          backgroundImage:
-            "url('')",
-        }}
       >
         {[0, 1].map((i) => (
           <div

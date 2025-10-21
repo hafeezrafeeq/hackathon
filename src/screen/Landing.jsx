@@ -5,9 +5,11 @@ import Navbar from '../components/Navbar';
 import GreenArea from '../components/GreenArea';
 import About from '../components/About';
 import Eyes from '../components/Eyes';
-import Featured from '../components/Featured';
-import Gemini from "../components/Gemini"
+import Featured from '../../components/Featured';
+
 import Footer from '../components/Footer';
+import CreatePitch from './CreatePitch';
+import PitchResult from './PitchResult';
 
 function Landing() {
   return (
@@ -17,7 +19,8 @@ function Landing() {
       <GreenArea />
       <About />
       <Eyes 
-      className="bg-[(https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg)]"/>
+      
+      className="bg-[url('https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg')] bg-cover bg-center h-screen w-full"/>
 
       <Featured
         image1={"https://ochi.design/wp-content/uploads/2025/02/Salience_Website_cover-663x551.png"}
@@ -34,7 +37,9 @@ function Landing() {
         className='hidden mt-[20]'
       />
 
-      <Gemini/>
+      
+      <CreatePitch/>
+  
       <Footer/>
 
      

@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './screen/Landing';
 import Login from './screen/Login';
 import SignUp from './screen/SignUp';
-import CreatePitch from './screen/CreatePitch';
-import PitchResult from './screen/PitchResult';
+
 import './App.css';
 
 // Import Locomotive Scroll
@@ -27,12 +26,11 @@ function App() {
   return (
     <Router>
       <div data-scroll-container>
+
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/create-pitch" element={<CreatePitch />} />
-          <Route path="/pitch-result" element={<PitchResult />} />
         </Routes>
       </div>
     </Router>
