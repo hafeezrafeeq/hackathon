@@ -5,6 +5,7 @@ import PitchResult from "./PitchResult";
 import { VscSymbolColor} from "react-icons/vsc";
 import { IoEarth } from "react-icons/io5";
 import { SlEnergy } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 
 const CreatePitch = () => {
@@ -64,23 +65,29 @@ const CreatePitch = () => {
 
     // If showing result, show PitchResult component
     if (showResult && pitchData) {
+
+
+
         return (
             <div className="min-h-screen bg-zinc-900">
                 <Navbar />
                 <div className="pt-20">
-                    <div className="text-center mb-6">
+                    <Link
+                    to="./signup"
+                     className="text-center mb-6">
                         <button
                             onClick={handleGenerateNew}
                             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors mb-4"
                         >
                             ← Generate New Pitch
                         </button>
-                    </div>
+                    </Link>
                     <PitchResult pitchData={pitchData} />
                 </div>
             </div>
         );
     }
+    
 
     return (
         <section id="pitchcraft" className="min-h-screen  from-zinc-900 font-[r-neue] to-zinc-800 text-white">
